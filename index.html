@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="MMFactory: A Universal Solution Search Engine for Vision-Language Tasks.">
+  <meta name="keywords" content="MMFactory, Model routing, AIFactory">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>MMFactory: A Universal Solution Search Engine for Vision-Language Tasks</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -40,6 +40,13 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
+<!-- <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesiconheet" href="./static/images/logo.png">
+  <title>MMFactory</title>
+</head> -->
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -52,7 +59,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://sites.google.com/view/wancyuanfan">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,17 +70,14 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
+          <a class="navbar-item" href="https://arxiv.org/abs/2407.14506">
+            ChopinLLM
           </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
+          <a class="navbar-item" href="https://davidhalladay.github.io/m3t_demo/">
+            TAM-VT
           </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://sites.google.com/view/wancyuanfan/projects/frido">
+            Frido
           </a>
         </div>
       </div>
@@ -88,32 +92,24 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">
+            <img src="./static/images/logo.png" alt="Logo" style="width: 60px; height: 60px; vertical-align: middle;"> MMFactory: A Universal Solution Search Engine for Vision-Language Tasks
+          </h1>
+          <!-- <h1 class="title is-1 publication-title">MMFactory: A Universal Solution Search Engine for Vision-Language Tasks</h1> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://sites.google.com/view/wancyuanfan">Wan-Cyuan Fan</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://sites.google.com/view/tanzila-rahman/home">Tanzila Rahman</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://www.cs.ubc.ca/~lsigal/">Leonid Sigal</a><sup>1,2,3</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>University of British Columbia,</span>
+            <span class="author-block"><sup>2</sup>Vector Institute for AI</span>
+            <span class="author-block"><sup>3</sup>CIFAR AI Chair</span>
           </div>
 
           <div class="column has-text-centered">
@@ -156,18 +152,17 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span>
+              <!-- </span> -->
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
             </div>
-
           </div>
         </div>
       </div>
@@ -453,33 +448,43 @@
   </div>
 </section>
 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Acknowledgements</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            This work was funded, in part, by the Vector Institute for AI, Canada CIFAR AI Chairs, NSERC Canada Research Chair (CRC), and NSERC Discovery and Discovery Accelerator Supplement Grants. Resources used in preparing this research were provided, in part, by the Province of Ontario, the Government of Canada through CIFAR, <a href="https://www.alliancecan.ca/en">the Digital Research Alliance of Canada</a>, <a href="https://vectorinstitute.ai/\#partners">companies</a> sponsoring the Vector Institute, and Advanced Research Computing at the University of British Columbia. Additional hardware support was provided by John R. Evans Leaders Fund CFI grant and Compute Canada under the Resource Allocation Competition award.
+          </p>
+        </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
+    <!-- <div class="content has-text-centered"> -->
+      <!-- <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      </a> -->
+      <!-- <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
-      </a>
-    </div>
+      </a> -->
+    <!-- </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
+            Website template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+          <!-- <p>
+            Website template borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p> -->
         </div>
       </div>
     </div>
