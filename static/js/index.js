@@ -1,14 +1,25 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
-var NUM_INTERP_FRAMES = 240;
+var INTERP2_BASE = "./static/interpolation2/stacked";
+var NUM_INTERP_FRAMES = 11;
+var NUM_INTERP2_FRAMES = 10;
 
 var interp_images = [];
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.jpg';
+    var path = INTERP_BASE + '/' + String(i).padStart(6, '0') + '.svg';
     interp_images[i] = new Image();
     interp_images[i].src = path;
+  }
+}
+
+var interp2_images = [];
+function preloadInterpolation2Images() {
+  for (var i = 0; i < NUM_INTERP2_FRAMES; i++) {
+    var path = INTERP2_BASE + '/' + String(i).padStart(6, '0') + '.svg';
+    interp2_images[i] = new Image();
+    interp2_images[i].src = path;
   }
 }
 
@@ -17,6 +28,13 @@ function setInterpolationImage(i) {
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
   $('#interpolation-image-wrapper').empty().append(image);
+}
+
+function setInterpolation2Image(i) {
+  var image = interp2_images[i];
+  image.ondragstart = function() { return false; };
+  image.oncontextmenu = function() { return false; };
+  $('#interpolation2-image-wrapper').empty().append(image);
 }
 
 
@@ -31,7 +49,7 @@ $(document).ready(function() {
 
     var options = {
 			slidesToScroll: 1,
-			slidesToShow: 3,
+			slidesToShow: 1,
 			loop: true,
 			infinite: true,
 			autoplay: false,
@@ -72,6 +90,14 @@ $(document).ready(function() {
     });
     setInterpolationImage(0);
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+
+    preloadInterpolation2Images();
+
+    $('#interpolation2-slider').on('input', function(event) {
+      setInterpolation2Image(this.value);
+    });
+    setInterpolation2Image(0);
+    $('#interpolation2-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
 
